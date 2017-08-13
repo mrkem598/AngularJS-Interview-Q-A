@@ -233,4 +233,48 @@ This question is important as it will judge a persons knowledge about a $scope o
 
 Source: https://docs.angularjs.org/guide/scope
 
+***
+## 20. What are Directives?
+***
+## Answer:
+Directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS’s HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children. Angular comes with a set of these directives built-in, like ngBind, ngModel, and ngClass. Much like you create controllers and services, you can create your own directives for Angular to use. When Angular bootstraps your application, the HTML compiler traverses the DOM matching directives against the DOM elements.
 
+This question is important because directives define the UI while defining a single page app. You need to be very clear about how to create a new custom directive or use the existing ones already pre-build in AngularJS.
+
+Source: https://docs.angularjs.org/guide/directive
+
+***
+## 21. What is DDO `Directive Difinition Object`?
+***
+## Answer:
+DDO is an object used while creating a custome directive. A standard DDO object has following parameters.
+		var directiveDefinitionObject = {
+    			priority: 0,
+  			  template: '<div></div>', // or // function(tElement, tAttrs) { ... },
+   				 // or
+   				 // templateUrl: 'directive.html', // or // function(tElement, tAttrs) { ... },
+   			 transclude: false,
+   			 restrict: 'A',
+    			templateNamespace: 'html',
+   			 scope: false,
+  			  controller: function($scope, $element, $attrs, $transclude, otherInjectables) { ... },
+  			  controllerAs: 'stringIdentifier',
+  			  bindToController: false,
+  			  require: 'siblingDirectiveName', // or // ['^parentDirectiveName', '?optionalDirectiveName', '?
+			  ^optionalParent'],
+    			  compile: function compile(tElement, tAttrs, transclude) {
+    		  return {
+    			    pre: function preLink(scope, iElement, iAttrs, controller) { ... },
+        		    post: function postLink(scope, iElement, iAttrs, controller) { ... }
+	      		}
+      			// or
+     			 // return function postLink( ... ) { ... }
+   			 },
+   			 // or
+   			 // link: {
+    			//  pre: function preLink(scope, iElement, iAttrs, controller) { ... },
+    			//  post: function postLink(scope, iElement, iAttrs, controller) { ... }
+    			// }
+   			 // or
+   			 // link: function postLink( ... ) { ... }
+			  };"
