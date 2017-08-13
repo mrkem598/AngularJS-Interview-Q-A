@@ -176,3 +176,50 @@ A typical service can be injected into another service or into an AngularJS Cont
 – https://docs.angularjs.org/guide/services
 – http://www.tutorialspoint.com/angularjs/angularjs_services.htm
 
+***
+## 16. When creating a directive, it can be used in several different ways in the view. Which ways for using a directive  do you know? How do you define the way your directive will be used?
+***
+## Answer:
+When you create a directive, it can be used as an attribute, element or class name. To define which way to use, you need to set the restrict option in your directive declaration.
+
+The restrict option is typically set to:
+
+‘A’ – only matches attribute name
+‘E’ – only matches element name
+‘C’ – only matches class name
+
+These restrictions can all be combined as needed:
+
+‘AEC’ – matches either attribute or element or class name
+
+For more information, feel free to check out the AngularJS documentation.
+
+***
+## 17. When should you use an attribute Vs an element?
+***
+## Answer:
+Use an element when you are creating a component that is in control of the template. Use an attribute when you are decorating an existing element with new functionality.
+
+This topic is important so developers can understand the several ways a directive can be used inside a view and when to use each way.
+
+Sources: https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object
+***
+## 18. How do you reset a `$timeout, $interval()`, and disable a `$watch()`?
+***
+## Answer:
+To reset a timeout and/or $interval, assign the result of the function to a variable and then call the .cancel() function.
+
+		`var customTimeout = $timeout(function () {
+
+ 		 // arbitrary code
+		}, 55);
+
+		$timeout.cancel(customTimeout);`
+
+to disable $watch(), we call its deregistration function. $watch() then returns a deregistration function that we store to a variable and that will be called for cleanup
+
+`var deregisterWatchFn = $scope.$on(‘$destroy’, function () {
+    // we invoke that deregistration function, to disable the watch
+    deregisterWatchFn();
+});`
+
