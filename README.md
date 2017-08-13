@@ -248,6 +248,7 @@ Source: https://docs.angularjs.org/guide/directive
 ***
 ## Answer:
 DDO is an object used while creating a custome directive. A standard DDO object has following parameters.
+		
 		var directiveDefinitionObject = {
     			priority: 0,
   			  template: '<div></div>', // or // function(tElement, tAttrs) { ... },
