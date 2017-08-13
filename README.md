@@ -279,3 +279,45 @@ DDO is an object used while creating a custome directive. A standard DDO object 
    			 // or
    			 // link: function postLink( ... ) { ... }
 			  };"
+
+This question mainly judges whether candidate knows about creating custom directives.
+
+Read more at https://docs.angularjs.org/guide/directive
+
+***
+## 22. What is a singleton pattern and where we can find it in AngularJS?
+***
+## Answer:
+Is a great pattern that restricts the use of a class more than once. We can find singleton pattern in angular in dependency injection and in the services.
+
+In a sense, if you do 2 times ‘new Object()‘ without this pattern, you will be alocating 2 pieces of memory for the same object. With singleton pattern, if the object exists, you reuse it.
+
+Source: http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/
+
+***
+## 23. What is an interceptor? 
+***
+## Answer:
+An interceptor is a middleware code where all the $http requests go through. The interceptor is a factory that are registered in `$httpProvider`.
+***
+## 24. What are common uses of an interceptor in AngularJS?
+***
+## Answer:
+There are two types of requests that go through the interceptor, request and response (with requestError and responseError respectively). This piece of code is very useful for error handling, authentication or middleware in all the requests/responses.
+
+Source: https://docs.angularjs.org/api/ng/service/$http
+***
+## 25. How would you programatically change or adapt the template of a directive before it is executed and transformed?
+***
+## Answer:
+You would use the compile function. The compile function gives you access to the directive’s template before transclusion occurs and templates are transformed, so changes can safely be made to DOM elements. This is very useful for cases where the DOM needs to be constructed based on runtime directive parameters.
+Source: https://docs.angularjs.org/api/ng/service/$compile
+***
+## 26. How would you validate a text input field for a twitter username, including the @ symbol?
+***
+## Answer:
+You would use the ngPattern directive to perform a regex match that matches Twitter usernames. The same principal can be applied to validating phone numbers, serial numbers, barcodes, zip codes and any other text input.
+Source:https://docs.angularjs.org/api/ng/directive/ngPattern 
+***
+## 27. 
+
