@@ -133,7 +133,7 @@ A deep copy of a variable means it doesn’t point to the same memory reference 
 ## Answer:
 To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
 
-`angular.factory('testService', function($q){
+    angular.factory('testService', function($q){
 	return {
 		getName: function(){
 			var deferred = $q.defer();
@@ -146,7 +146,7 @@ To add promise functionality to a service, we inject the “$q” dependency in 
 			return deferred.promise;
 		}
 	}
-})`
+      })
 
 The $q library is a helper provider that implements promises and deferred objects to enable asynchronous functionality
 
@@ -209,17 +209,28 @@ Sources: https://docs.angularjs.org/api/ng/service/$compile#directive-definition
 ## Answer:
 To reset a timeout and/or $interval, assign the result of the function to a variable and then call the .cancel() function.
 
-		`var customTimeout = $timeout(function () {
+		var customTimeout = $timeout(function () {
 
  		 // arbitrary code
 		}, 55);
 
-		$timeout.cancel(customTimeout);`
+		$timeout.cancel(customTimeout);                                                                                                                                                    
 
 to disable $watch(), we call its deregistration function. $watch() then returns a deregistration function that we store to a variable and that will be called for cleanup
 
-`var deregisterWatchFn = $scope.$on(‘$destroy’, function () {
-    // we invoke that deregistration function, to disable the watch
-    deregisterWatchFn();
-});`
+		var deregisterWatchFn = $scope.$on(‘$destroy’, function () {
+    			// we invoke that deregistration function, to disable the watch
+	    		deregisterWatchFn();
+			});
+			
+***
+## 19. Explain what is a `$scope` in AngularJS is?
+***
+## Answer:
+Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events. Scopes are objects that refer to the model. They act as glue between controller and view.
+
+This question is important as it will judge a persons knowledge about a $scope object, and it is one of the most important concepts in AngularJS. Scope acts like a bridge between view and model.
+
+Source: https://docs.angularjs.org/guide/scope
+
 
