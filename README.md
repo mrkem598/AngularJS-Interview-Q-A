@@ -77,5 +77,22 @@ It is definitely a bad practice. We need to stay away from jQuery and try to rea
 
 AngularJS, however, takes a declarative approach to DOM manipulation. Here, instead of worrying about all of the step by step details regarding how to do the desired outcome, we are just declaring what we want and AngularJS worries about the rest, taking care of everything for us.
 
+***
+## 8. If you were to migrate from Angular 1.4 to 1.5, what is the main thing that would need refactoring?
+***
+## Answer:
+Changing .directive to .component to adapt to the new Angular 1.5 components
+
+***
+## 9. How would you specify that a scope variable should have one-time binding only?
+***
+## Answer:
+By using “::” in front of it. This allows the check if the candidate is aware of the available variable bindings in AngularJS.
+***
+## 10. What is the difference between one-way binding and two-way binding?
+***
+## Answer?
+– One way binding implies that the scope variable in the html will be set to the first value its model is bound to (i.e. assigned to)
+– Two way binding implies that the scope variable will change it’s value everytime its model is assigned to a different value
 
 
