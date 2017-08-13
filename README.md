@@ -18,7 +18,9 @@ Dependency injection is a powerful software design pattern that Angular employs 
 This question is useful since it can give you a feel for how familiar the candidate is with automated testing (TDD, BDD, E2E), as well as open up a conversation about approaches to code quality.
 
 Source:
+
 https://github.com/daniellmb/angular-test-patterns/blob/master/patterns/filter.md
+
 https://docs.angularjs.org/guide/unit-testing
 
 ***
