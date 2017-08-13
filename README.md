@@ -417,6 +417,6 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-*** 🌹
+*** 
 🌹 Let's contribute and rock the interview. I have started with this and it's to all of us to add something to it and do more!!
-***  🌹
+***  
