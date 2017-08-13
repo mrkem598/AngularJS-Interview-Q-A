@@ -151,4 +151,28 @@ To add promise functionality to a service, we inject the “$q” dependency in 
 The $q library is a helper provider that implements promises and deferred objects to enable asynchronous functionality
 
 Source: https://docs.angularjs.org/api/ng/service/$q
+***
+## 15. What is the role of services in AngularJS and name any services made available by default?
+***
+## Answer:
+– AngularJS Services are objects that provide separation of concerns to an AngularJS app.
+– AngularJS Services can be created using a factory method or a service method.
+– Services are singleton components. All components of the application (into which the service is injected) will work with single instance of the service.
+– An AngularJS service allows developing of business logic without depending on the View logic which will work with it.
+
+Few of the inbuilt services in AngularJS are:
+– the $http service: The $http service is a core Angular service that facilitates communication with the remote HTTP servers via the browser’s XMLHttpRequest object or via JSONP
+– the $log service: Simple service for logging. Default implementation safely writes the message into the browser’s console
+– the $anchorScroll: it scrolls to the element related to the specified hash or (if omitted) to the current value of $location.hash()
+Why should one know about AngularJS Services, you may ask. Well, understanding the purpose of AngularJS Services helps bring modularity to AngularJS code.
+Services are the best may to evolve reusable API within and AngularJS app
+
+Overview:
+
+AngularJS Services help create reusable components.
+A Service can be created either using the service() method or the factory() method.
+A typical service can be injected into another service or into an AngularJS Controller.
+	##    Source:
+– https://docs.angularjs.org/guide/services
+– http://www.tutorialspoint.com/angularjs/angularjs_services.htm
 
