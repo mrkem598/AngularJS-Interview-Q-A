@@ -414,7 +414,12 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 ***
 ## Answer:
  In Angular we can generate component from the terminal by ngFor generater. If I want to create contact componenet, I would just run `ng generate component contact` and it will create all the necesory file for me and just update that to use it!
- 
+
+***
+## 33.  An operator that we can use to avoid any 404 error is?
+***
+## Answer:
+ In Angular we can use `?` to avoid any unecessory file not found response. Let say if we have a cantacts information and we did not give a photo url but if we write  `contact?.photoUrl`  it will say 404 even if photo was not added.
 ***
 ## License:
 ***
