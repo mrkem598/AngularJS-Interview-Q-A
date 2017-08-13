@@ -93,6 +93,7 @@ By using “::” in front of it. This allows the check if the candidate is awar
 ***
 ## Answer?
 – One way binding implies that the scope variable in the html will be set to the first value its model is bound to (i.e. assigned to)
+
 – Two way binding implies that the scope variable will change it’s value everytime its model is assigned to a different value
 
 
