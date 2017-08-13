@@ -408,6 +408,12 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 ***
 ## Answer:
  In angular, calls to the HTTP methods actually return an observable and not a promise. You can think of an observable as a stream of events, and meeting values to anyone who has subscribed to it.
+
+***
+## 32.  AngularJS comandline to generate e component from the terminal?
+***
+## Answer:
+ In Angular we can generate component from the terminal by ngFor generater. If I want to create contact componenet, I would just run `ng generate component contact` and it will create all the necesory file for me and just update that to use it!
  
 ***
 ## License:
