@@ -1,6 +1,6 @@
 
 ******
-https://user-images.githubusercontent.com/23619819/29246894-edaff42c-7fd3-11e7-8be3-2be3325cc879.png
+
 ******
 ## Twenty Five Most common and proven success AngularJS-Interview-Questions
 ****
