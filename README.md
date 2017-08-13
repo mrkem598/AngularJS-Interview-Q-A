@@ -404,17 +404,15 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 		<button ng-disabled="checked">Select me</button>
 	</body>
 ***
-## 31.  In angular, what does the calls to the HTTP methods  returns ?
+## 31.  In angular, what does the calls to the HTTP methods  return ?
 ***
 ## Answer:
  In angular, calls to the HTTP methods actually return an observable and not a promise. You can think of an observable as a stream of events, and meeting values to anyone who has subscribed to it.
  
 ***
-License:
+## License:
 ***
-MIT 
-
-Copyright (c) 2017 Mohammed K
+MIT Copyright (c) 2017 Mohammed Kemal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -426,5 +424,5 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 *** 
-🌹 Let's contribute and rock the interview. I have started with this and it's to all of us to add something to it and do more!!
+## 🌹 Let's contribute and rock the interview. I have started with this and it's to all of us to add something to it and do more!!
 ***  
