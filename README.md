@@ -315,7 +315,56 @@ Source: https://docs.angularjs.org/api/ng/service/$compile
 ***
 ## Answer:
 You would use the ngPattern directive to perform a regex match that matches Twitter usernames. The same principal can be applied to validating phone numbers, serial numbers, barcodes, zip codes and any other text input.
+Note: This directive is also added when the plain pattern attribute is used, with two differences:
+ngPattern does not set the pattern attribute and therefore HTML5 constraint validation is not available.
+The ngPattern attribute must be an expression, while the pattern value must be interpolated.
+
+	<script>
+ 	 angular.module('ngPatternExample', [])
+    		.controller('ExampleController', ['$scope', function($scope) {
+     		 $scope.regex = '\\d+';
+   	 }]);
+	</script>
+	<div ng-controller="ExampleController">
+ 	 <form name="form">
+   	 <label for="regex">Set a pattern (regex string): </label>
+   	 <input type="text" ng-model="regex" id="regex" />
+   	 <br>
+    	<label for="input">This input is restricted by the current pattern: </label>
+    	<input type="text" ng-model="model" id="input" name="input" ng-pattern="regex" /><br>
+    	<hr>
+    	input valid? = <code>{{form.input.$valid}}</code><br>
+   	 model = <code>{{model}}</code>
+  	</form>
+	</div>
 Source:https://docs.angularjs.org/api/ng/directive/ngPattern 
 ***
-## 27. 
+## 27. How would you implement application-wide exception handling in your Angular app?
+***
+## Answer:
+Angular has a built-in error handler service called $exceptionHandler which can easily be overriden as seen below:
 
+	myApp.factory('$exceptionHandler', function($log, ErrorService) {
+   		 return function(exception, cause) {
+        
+        	if (console) {
+          	  $log.error(exception);
+          	  $log.error(cause);
+      		  }
+
+      			  ErrorService.send(exception, cause);
+   		 };
+		 
+	});
+This is very useful for sending errors to third party error logging services or helpdesk applications. Errors trapped inside of event callbacks are not propagated to this handler, but can manually be relayed to this handler by calling $exceptionHandler(e) from within a try catch block.
+***
+## 28. How do you hide an HTML element via a button click in AngularJS?
+***
+## Answer:
+You can do this by using the `ng-hide` directive in conjunction with a controller we can hide an HTML element on button click.
+
+		<div ng-controller="MyCtrl">
+			<button ng-click="hide()">Hide element</button>
+			<p ng-hide="isHide">Hello World!</p>
+		</div>	
+		
