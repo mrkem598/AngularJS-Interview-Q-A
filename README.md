@@ -96,4 +96,53 @@ By using “::” in front of it. This allows the check if the candidate is awar
 
 – Two way binding implies that the scope variable will change it’s value everytime its model is assigned to a different value
 
+***
+## 11. Explain how `$scope.$apply()` works?
+***
+## Answer:
+
+ It will re-evaluates all the declared ng-models and applies the change to any that have been altered (i.e. assigned to a new value)
+
+Explanation: $scope.$apply() is one of the core angular functions that should never be used explicitly, it forces the angular engine to run on all the watched variables and all external variables and apply the changes on their values
+Source: https://docs.angularjs.org/api/ng/type/$rootScope.Scope
+***
+## 12. What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?
+***
+## Answer:
+The ngIf Directive, when applied to an element, will remove that element from the DOM if it’s condition is false.
+***
+## 13. What makes the `angular.copy()` method so powerful?
+***
+## Answer:
+It creates a deep copy of the variable.
+
+A deep copy of a variable means it doesn’t point to the same memory reference as that variable. Usually assigning one variable to another creates a “shallow copy”, which makes the two variables point to the same memory reference. Therefore if we change one, the other changes as well
+
+`Sources:`
+– https://docs.angularjs.org/api/ng/function/angular.copy
+– https://en.wikipedia.org/wiki/Object_copying
+***
+## 14. How would you make an Angular service return a promise? Write a code snippet as an example?
+***
+## Answer:
+To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
+`
+angular.factory('testService', function($q){
+	return {
+		getName: function(){
+			var deferred = $q.defer();
+
+			//API call here that returns data
+			testAPI.getName().then(function(name){
+				deferred.resolve(name)
+			})
+
+			return deferred.promise;
+		}
+	}
+})
+`
+The $q library is a helper provider that implements promises and deferred objects to enable asynchronous functionality
+
+Source: https://docs.angularjs.org/api/ng/service/$q
 
