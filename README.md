@@ -368,3 +368,55 @@ You can do this by using the `ng-hide` directive in conjunction with a controlle
 			<p ng-hide="isHide">Hello World!</p>
 		</div>	
 		
+	
+	function MyCtrl($scope){
+		$scope.isHide = false;
+		$scope.hide = function(){
+		$scope.isHide = true;
+		}
+	}
+***
+## 29. How would you react on model changes to trigger some further action? For instance, say you have an input text field called email and you want to trigger or execute some code as soon as a user starts to type in their email.
+***
+## Answer:
+We can achieve this using $watch function in our controller.
+
+	function MyCtrl($scope) {
+		$scope.email = "";
+
+		$scope.$watch("email", function(newValue, oldValue) {
+			if ($scope.email.length > 0) {
+				console.log("User has started writing into email");
+			}
+		});
+		}
+		
+***
+## 30. How do you disable a button depending on a checkbox’s state?
+***
+## Answer:
+We can use the ng-disabled directive and bind its condition to the checkbox’s state.
+
+	<body ng-app>
+		<label><input type="checkbox" ng-model="checked"/>Disable Button</label>
+		<button ng-disabled="checked">Select me</button>
+	</body>
+***
+License:
+***
+MIT 
+
+Copyright (c) 2017 Mohammed K
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+*** 🌹
+🌹 Let's contribute and rock the interview. I have started with this and it's to all of us to add something to it and do more!!
+***  🌹
