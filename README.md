@@ -126,8 +126,8 @@ A deep copy of a variable means it doesn’t point to the same memory reference 
 ***
 ## Answer:
 To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
-`
-angular.factory('testService', function($q){
+
+`angular.factory('testService', function($q){
 	return {
 		getName: function(){
 			var deferred = $q.defer();
@@ -140,8 +140,8 @@ angular.factory('testService', function($q){
 			return deferred.promise;
 		}
 	}
-})
-`
+})`
+
 The $q library is a helper provider that implements promises and deferred objects to enable asynchronous functionality
 
 Source: https://docs.angularjs.org/api/ng/service/$q
