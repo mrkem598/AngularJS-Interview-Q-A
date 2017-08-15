@@ -421,6 +421,21 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 ## Answer:
  In Angular we can use `?` to avoid any unecessory file not found response. Let say if we have a cantacts information and we did not give a photo url but if we write  `[src]=contact?.photoUrl`  it will say 404 even if photo was not added.
 ***
+***
+## 34.  Using the Angular Http module to make a request, which method is used to listen for an emitted response?
+***
+## Answer:
+ In Angular Http module to make a request,  method is used to listen for an emitted response.Subscribe
+***
+## 35.  What is the Router directive that can be placed on elements to navigate to a new route?
+***
+## Answer:
+ Router directive that can be placed on elements to navigate to a new route is `[routerLink]`.
+## 36.  Assuming "form" is an NgForm object, which property is used to retrieve the form values?
+***
+## Answer:
+ The form value can be retrieved by `[form.value]`.
+***
 ## License:
 ***
 MIT Copyright (c) 2017 Mohammed Kemal
