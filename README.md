@@ -436,6 +436,16 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 ## Answer:
  The form value can be retrieved by `[form.value]`.
 ***
+## 37.  An Angular class that used to create an instance that will be an argument to the request method of http is??
+***
+## Answer:
+  `[Request]`.
+***
+## 38.  An Angular generator to generate `api.service.spec.ts` inside the `shared` componenet is ?
+***
+## Answer:
+  `[ng generat service shared/api]`.
+***
 ## License:
 ***
 MIT Copyright (c) 2017 Mohammed Kemal
