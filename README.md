@@ -446,6 +446,22 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 ## Answer:
   `[ng generat service shared/api]`.
 ***
+## 39.  A JSON Web Token consists of .... ?
+***
+## Answer:
+ JSON Web Token consists of header, payload and signature. You can read more at https://jwt.io/
+***
+## 40.  A JWT should be signed with a secret called ?
+***
+## Answer:
+   High security password. Generating long, high-quality random passwords is
+not simple. You can easily generate one via this link https://www.grc.com/passwords.htm
+***
+## 41.  Having the JWT token, what is the format of the Authorization header looks like?
+***
+## Answer:
+  The authorization header should be `Bearer [token]`.
+***
 ## License:
 ***
 MIT Copyright (c) 2017 Mohammed Kemal
