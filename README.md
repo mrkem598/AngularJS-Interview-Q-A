@@ -37,6 +37,7 @@ This question is valuable as it gives insight into how the candidate debugs runt
 
 Sources:
 https://github.com/kentcdodds/ng-stats
+
 http://jankfree.org
 ***
 ## 3. How do you share data between controllers?
@@ -160,7 +161,7 @@ Source: https://docs.angularjs.org/api/ng/service/$q
 – Services are singleton components. All components of the application (into which the service is injected) will work with single instance of the service.
 – An AngularJS service allows developing of business logic without depending on the View logic which will work with it.
 
-Few of the inbuilt services in AngularJS are:
+ Few of the inbuilt services in AngularJS are:
 – the $http service: The $http service is a core Angular service that facilitates communication with the remote HTTP servers via the browser’s XMLHttpRequest object or via JSONP
 – the $log service: Simple service for logging. Default implementation safely writes the message into the browser’s console
 – the $anchorScroll: it scrolls to the element related to the specified hash or (if omitted) to the current value of $location.hash()
