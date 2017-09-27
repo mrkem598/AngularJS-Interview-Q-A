@@ -463,6 +463,9 @@ not simple. You can easily generate one via this link https://www.grc.com/passwo
 ## Answer:
   The authorization header should be `Bearer [token]`.
 ***
+## 42. Is it possible to use MVC in AngularJS?
+
+Answer: True
 ## License:
 ***
 MIT Copyright (c) 2017 Mohammed Kemal
